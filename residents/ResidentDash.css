@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+nav ul li {
+    margin-bottom: 10px;
+}
+nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #555;
+}
+nav ul li a:hover .logo {
+    transform: scale(1.1); /* Example hover effect */
+}
+.logo {
+    width: 100px; /* Adjust as needed */
+    margin-bottom: 20px; /* Spacing between logo and links */
+    transition: transform 0.3s; /* Transition effect */
+}
+.content {
+    margin-left: 220px; /* Adjust based on nav width */
+    padding: 20px;
+    text-align: center;
+}
+
+
+.resident-profile {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.resident-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.info-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.info-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s; /* Transition effect */
+}
+.info-box img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.info-box:hover {
+    transform: scale(1.1); /* Example hover effect */
+}
+.graph-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.graph-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 450px; /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    transition: transform 0.3s; /* Transition effect */
+}
+.graph-box:hover {
+    transform: scale(1.1); /* Example hover effect */
+}
+.graph-box h2 {
+    margin-top: 0;
+}
+.graph-box img {
+    max-width: 400px; /* Adjusted width */
+    max-height: 250px; /* Adjusted height */
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.info-box img {
+    max-width: 80px; /* Adjusted width */
+    max-height: 80px; /* Adjusted height */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.info-box:hover {
+    transform: scale(1.1); /* Example hover effect */
+}
+.task-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.task-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 300px; /* Adjusted width */
+    height: 200px; /* Adjusted height */
+    transition: transform 0.3s; /* Transition effect */
+}
+.task-box:hover {
+    transform: scale(1.1); /* Example hover effect */
+}
+.task-box h2 {
+    margin-top: 0;
+}
+.task-box img {
+    
+    max-width: 80px; /* Adjusted width */
+    max-height: 80px; /* Adjusted height */
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.reservation-details {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 300px; /* Adjusted width */
+    transition: transform 0.3s; /* Transition effect */
+}
+.reservation-details h2 {
+    margin-top: 0;
+}
+.reservation-details p {
+    margin-bottom: 10px;
+}
+.reservation-details button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.reservation-details button:hover {
+    background-color: #555;
+}
+.separator-bar {
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+}

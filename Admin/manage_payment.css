@@ -1,0 +1,80 @@
+
+.container {
+    margin-left: 220px; /* Adjust based on nav width */
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+#paymentTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#paymentTable th,
+#paymentTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#paymentTable th {
+    background-color: #f2f2f2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.received-amount {
+    color: green;
+}
+
+.pending-amount {
+    color: red;
+}
+
+.total-row {
+    background-color: #ffc107;
+    color: blue; /* Change the color of the total amount here */
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.pagination button:hover {
+    background-color: #555;
+}
+
+.pagination button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}

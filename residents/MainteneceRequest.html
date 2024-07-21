@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System - Resident Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .container {
+            margin-left: 220px;
+            padding: 20px;
+            text-align: center;
+        }
+        .form-box {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-box input,
+        .form-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-box textarea {
+            resize: vertical;
+        }
+        .form-box button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-box button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="ResidentDash.php">
+                    <img src="Hostel.avif" alt="Hostel Logo" class="logo">
+                    Dashboard
+                </a>
+            </li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="PaymentResident.html">My Payments</a></li>
+            <li><a href="MainteneceRequest.html">Maintenance Requests</a></li>
+            <li><a href="chat.html">Chats</a></li> <!-- Redirect to chat.html -->
+            <li><a href="logout.php?logout=true">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Maintenance Request</h1>
+        <div class="form-box">
+            <form action="submit_request.php" method="post" enctype="multipart/form-data">
+                <input type="text" name="description" placeholder="Description of the issue" required>
+                <input type="text" name="preferred_date" placeholder="Preferred repair dates">
+                <textarea name="additional_details" placeholder="Additional details (if any)"></textarea>
+                <input type="file" name="image" accept="image/*" multiple>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

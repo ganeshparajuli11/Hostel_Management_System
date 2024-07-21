@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System - Resident Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .container {
+            margin-left: 220px;
+            padding: 20px;
+            text-align: center;
+        }
+        .payment-methods {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .payment-method {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .payment-method:hover {
+            transform: scale(1.1);
+        }
+        .payment-method img {
+            width: 120px;
+            border-radius: 10px;
+        }
+        .payment-method p {
+            margin-top: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .pending-amount {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .confirmation-message {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="ResidentDash.php">
+                    <img src="Hostel.avif" alt="Hostel Logo" class="logo">
+                    Dashboard
+                </a>
+            </li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="PaymentResident.html">My Payments</a></li>
+            <li><a href="MainteneceRequest.html">Maintenance Requests</a></li>
+            <li><a href="chat.html">Chats</a></li> <!-- Redirect to chat.html -->
+            <li><a href="logout.php?logout=true">Logout</a></li>
+    
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Pay Fee</h1>
+        <p>Select a payment method:</p>
+        <div class="payment-methods">
+            <!-- Bank Transfer method -->
+            <div class="payment-method">
+                <img src="Bank.jpg" alt="Bank Transfer">
+                <p>NMB Bank</p>
+            </div>
+            <!-- eSewa method -->
+            <div class="payment-method" id="esewa-payment">
+                <img src="Esewa.png" alt="eSewa">
+                <p>eSewa</p>
+            </div>
+        </div>
+        <!-- Payment form for eSewa -->
+        <form id="esewa-form" style="display: none;">
+            <input type="hidden" name="payment_method" value="esewa">
+            <!-- You can add more fields as required -->
+            <button type="submit">Pay with eSewa</button>
+        </form>
+        <!-- Display pending amount -->
+        <div class="pending-amount">
+            <p>Pending Amount: <span id="pending-amount">Loading...</span></p>
+        </div>
+        <!-- Confirmation message -->
+        <div class="confirmation-message" style="display: none;">
+            <p>Payment successful! You will receive a receipt shortly.</p>
+        </div>
+    </div>
+
+    <script>
+        // Display eSewa payment form when clicked
+        document.getElementById('esewa-payment').addEventListener('click', function() {
+            document.getElementById('esewa-form').style.display = 'block';
+        });
+
+        // Fetch and display pending amount
+        window.addEventListener('DOMContentLoaded', function() {
+            fetchPendingAmount();
+        });
+
+        function fetchPendingAmount() {
+            fetch('fetch_pending_amount.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('pending-amount').textContent = data;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

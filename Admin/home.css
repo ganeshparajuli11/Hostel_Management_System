@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding-left: 20px; 
+    align-items: center;
+  }
+  
+  nav .logo {
+    margin-left: 5px;
+    width: 100px; 
+    margin-bottom: 20px; 
+    transition: transform 0.3s; 
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure the ul takes the full width */
+  }
+  
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 0; /* Adjust padding */
+    transition: background-color 0.3s;
+    text-align: left; /* Ensure the text is aligned to the left */
+    padding-left: 10px; /* Add padding-left for indentation */
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+        .content {
+            margin-left: 220px; /* Adjust based on nav width */
+            padding: 20px;
+            text-align: center;
+        }
+        .admin-profile {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .admin-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .info-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .info-box {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s; /* Transition effect */
+        }
+        .info-box img {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .info-box:hover {
+            transform: scale(1.1); /* Example hover effect */
+        }
+        .graph-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .graph-box {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 250px; /* Adjusted width */
+            height: 250px; /* Adjusted height */
+            transition: transform 0.3s; /* Transition effect */
+        }
+        .graph-box:hover {
+            transform: scale(1.1); /* Example hover effect */
+        }
+        .graph-box h2 {
+            margin-top: 0;
+        }
+        .graph-box img {
+            max-width: 200px; /* Adjusted width */
+            max-height: 200px; /* Adjusted height */
+            border-radius: 10px;
+            margin-top: 10px;
+        }
